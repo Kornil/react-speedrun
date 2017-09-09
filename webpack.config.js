@@ -40,8 +40,8 @@ module.exports = {
     },
   },
   entry: [
-    'react-hot-loader/patch',
     'babel-polyfill',
+    'react-hot-loader/patch',
     path.join(__dirname, '/src/index.jsx'),
   ],
   module: {
