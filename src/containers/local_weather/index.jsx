@@ -5,7 +5,7 @@ class LocalWeather extends Component {
     super();
 
     this.state = {
-      locationAPI: 'http://ip-api.com/json',
+      locationAPI: 'https://freegeoip.net/json/',
       location: null,
       weather: null,
       temp: 'C',
@@ -22,7 +22,7 @@ class LocalWeather extends Component {
   }
 
   async fetchWeather() {
-    const weatherAPI = `https://fcc-weather-api.glitch.me/api/current?lat=${this.state.location.lat}&lon=${this.state.location.lon}`;
+    const weatherAPI = `https://fcc-weather-api.glitch.me/api/current?lat=${this.state.location.latitude}&lon=${this.state.location.longitude}`;
     const response = await fetch(weatherAPI);
     const weather = await response.json();
     this.setState({
