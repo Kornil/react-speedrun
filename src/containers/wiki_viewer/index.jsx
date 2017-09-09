@@ -35,7 +35,7 @@ class WikiViewer extends Component {
           <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" rel="noopener noreferrer">Random!</a>
         </button>
         <div className="grid">
-          {(this.state.searchResult && this.state.searchInput) &&
+          {(this.state.searchResult && this.state.searchInput && this.state.searchResult.query) &&
             Object.entries(this.state.searchResult.query.pages).map(article => (
               <Card
                 key={article[0]}
