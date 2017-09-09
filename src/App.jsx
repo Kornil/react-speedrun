@@ -12,9 +12,12 @@ const App = () => (
   <HashRouter>
     <main className="grid p--2">
       <div className="col-2 pl--2">
-        <Link to="/">Home</Link><br />
-        <Link to="/quote_machine">Quote Machine</Link><br />
-        <Link to="/wiki_viewer">Wiki Viewer</Link><br />
+        <h3><Link to="/">Home</Link></h3>
+        <h3>Front-end</h3>
+        <ul>
+          <li className="pb--half"><Link className="pb--1" to="/quote_machine">Quote Machine</Link></li>
+          <li className="pb--half"><Link to="/wiki_viewer">Wiki Viewer</Link></li>
+        </ul>
       </div>
       <div className="col-8">
         <Switch>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class WikiViewer extends Component {
   constructor() {
@@ -35,16 +36,31 @@ class WikiViewer extends Component {
         </button>
         {this.state.searchResult && this.state.searchInput &&
           Object.entries(this.state.searchResult.query.pages).map(article => (
-            <a href={article[1].fullurl} target="_blank" rel="noopener noreferrer">
-              <div key={article[0]} className="m--1 ph--2 br--white rounded">
-                <h2>{article[1].title}</h2>
-                <p>{article[1].extract}</p>
-              </div>
-            </a>
+            <Card
+              key={article[0]}
+              url={article[1].fullurl}
+              title={article[1].title}
+              text={article[1].extract}
+            />
           ))}
       </div>
     );
   }
 }
+
+const Card = props => (
+  <a href={props.url} target="_blank" rel="noopener noreferrer">
+    <div className="m--1 ph--2 br--white rounded">
+      <h2>{props.title}</h2>
+      <p>{props.text}</p>
+    </div>
+  </a>
+);
+
+Card.propTypes = {
+  url: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export default WikiViewer;
