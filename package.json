@@ -2,7 +2,7 @@
   "name": "react-speedrun",
   "version": "1.0.0",
   "description": "1 month chingu react speedrun",
-  "main": "build/",
+  "main": "index.js",
   "author": "Francesco Agnoletto",
   "license": "MIT",
   "scripts": {
