@@ -6,7 +6,7 @@ class QuoteMachine extends Component {
     super();
 
     this.state = {
-      API: 'https://talaikis.com/api/quotes/random/',
+      quoteAPI: 'https://talaikis.com/api/quotes/random/',
       tweet: 'https://twitter.com/intent/tweet?via=Fragno92&hashtags=FreeCodeCamp&text=',
       quote: {},
     };
@@ -15,7 +15,7 @@ class QuoteMachine extends Component {
   }
 
   async fetchQuote() {
-    const response = await fetch(this.state.API);
+    const response = await fetch(this.state.quoteAPI);
     const quote = await response.json();
     this.setState({ quote });
   }
