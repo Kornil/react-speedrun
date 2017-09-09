@@ -1,0 +1,7 @@
+main {
+    @extend .bg--belize-hole;
+    @extend .text--white;
+}
+
+
+[class^='col-'][class*='--center'] {justify-self: center}
