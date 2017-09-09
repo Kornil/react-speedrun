@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const GhPagesWebpackPlugin = require('gh-pages-webpack-plugin');
 
 const dev = process.env.NODE_ENV !== 'production' && process.argv.indexOf('-p') === -1;
 
@@ -23,6 +24,10 @@ const UglifyJsPluginConfig = new webpack.optimize.UglifyJsPlugin({
     screw_ie8: true,
   },
   comments: false,
+});
+
+const GhPagesWebpackPluginConfig = new GhPagesWebpackPlugin({
+  path: './build',
 });
 
 module.exports = {
@@ -72,5 +77,5 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
   ] :
-  [HTMLWebpackPluginConfig, DefinePluginConfig, UglifyJsPluginConfig],
+  [HTMLWebpackPluginConfig, DefinePluginConfig, UglifyJsPluginConfig, GhPagesWebpackPluginConfig],
 };
