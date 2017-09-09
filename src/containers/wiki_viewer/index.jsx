@@ -34,27 +34,31 @@ class WikiViewer extends Component {
         <button className="button">
           <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" rel="noopener noreferrer">Random!</a>
         </button>
-        {this.state.searchResult && this.state.searchInput &&
-          Object.entries(this.state.searchResult.query.pages).map(article => (
-            <Card
-              key={article[0]}
-              url={article[1].fullurl}
-              title={article[1].title}
-              text={article[1].extract}
-            />
-          ))}
+        <div className="grid">
+          {(this.state.searchResult && this.state.searchInput) &&
+            Object.entries(this.state.searchResult.query.pages).map(article => (
+              <Card
+                key={article[0]}
+                url={article[1].fullurl}
+                title={article[1].title}
+                text={article[1].extract}
+              />
+            ))}
+        </div>
       </div>
     );
   }
 }
 
 const Card = props => (
-  <a href={props.url} target="_blank" rel="noopener noreferrer">
-    <div className="m--1 ph--2 br--white rounded">
-      <h2>{props.title}</h2>
-      <p>{props.text}</p>
-    </div>
-  </a>
+  <div className="col-6">
+    <a href={props.url} target="_blank" rel="noopener noreferrer">
+      <div className="m--1 ph--2 br--white rounded">
+        <h2>{props.title}</h2>
+        <p>{props.text}</p>
+      </div>
+    </a>
+  </div>
 );
 
 Card.propTypes = {
