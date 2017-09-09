@@ -22,7 +22,7 @@ class QuoteMachine extends Component {
 
   render() {
     return (
-      <div>
+      <section>
         <div className="mb--10">
           <h2>Quote Machine</h2>
         </div>
@@ -38,7 +38,7 @@ class QuoteMachine extends Component {
             rel="noopener noreferrer"
           >Tweet it!</a>
         </button>
-      </div>
+      </section>
     );
   }
 }

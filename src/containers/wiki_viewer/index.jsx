@@ -21,7 +21,7 @@ class WikiViewer extends Component {
 
   render() {
     return (
-      <div>
+      <section>
         <div className="mb--10">
           <h2>Wiki Viewer</h2>
         </div>
@@ -45,7 +45,7 @@ class WikiViewer extends Component {
               />
             ))}
         </div>
-      </div>
+      </section>
     );
   }
 }
