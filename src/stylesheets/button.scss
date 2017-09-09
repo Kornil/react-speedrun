@@ -1,0 +1,12 @@
+.button {
+    @extend .br--white;
+    @extend .rounded;
+    @extend .bg--belize-hole;
+    @extend .text--white;
+    // required as using @extend
+    // removes the prefix that adds border
+    border: 1px solid;
+    a {
+        text-decoration: none;
+    }
+}
