@@ -14,14 +14,14 @@ class LocalWeather extends Component {
     this.fetchLocation();
   }
 
-  async fetchLocation() {
+  fetchLocation = async () => {
     const response = await fetch(this.state.locationAPI);
     const location = await response.json();
     this.setState({ location });
     await this.fetchWeather();
   }
 
-  async fetchWeather() {
+  fetchWeather = async () => {
     const weatherAPI = `https://fcc-weather-api.glitch.me/api/current?lat=${this.state.location.latitude}&lon=${this.state.location.longitude}`;
     const response = await fetch(weatherAPI);
     const weather = await response.json();

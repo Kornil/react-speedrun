@@ -9,10 +9,9 @@ class WikiViewer extends Component {
       searchInput: '',
       searchResult: null,
     };
-    this.onChange = this.onChange.bind(this);
   }
 
-  async onChange(e) {
+  handleChange = async (e) => {
     this.setState({ searchInput: e.target.value });
     const response = await fetch(`https://en.wikipedia.org/w/api.php?format=json&origin=*&action=query&generator=search&prop=extracts|info&inprop=url&exintro&explaintext&exsentences=1&exlimit=10&gsrsearch=${this.state.searchInput}`);
     const searchResult = await response.json();
@@ -27,7 +26,7 @@ class WikiViewer extends Component {
         </div>
         <input
           className="input mb--2 mr--1"
-          onChange={this.onChange}
+          onChange={this.handleChange}
           value={this.state.search}
           placeholder="Search..."
         />

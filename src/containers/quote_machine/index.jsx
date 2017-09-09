@@ -10,11 +10,10 @@ class QuoteMachine extends Component {
       tweet: 'https://twitter.com/intent/tweet?via=Fragno92&hashtags=FreeCodeCamp&text=',
       quote: {},
     };
-    this.fetchQuote = this.fetchQuote.bind(this);
     this.fetchQuote();
   }
 
-  async fetchQuote() {
+  fetchQuote= async () => {
     const response = await fetch(this.state.quoteAPI);
     const quote = await response.json();
     this.setState({ quote });
