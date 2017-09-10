@@ -13,7 +13,7 @@ class QuoteMachine extends Component {
     this.fetchQuote();
   }
 
-  fetchQuote= async () => {
+  fetchQuote = async () => {
     const response = await fetch(this.state.quoteAPI);
     const quote = await response.json();
     this.setState({ quote });

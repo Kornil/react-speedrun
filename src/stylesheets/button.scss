@@ -10,3 +10,9 @@
         text-decoration: none;
     }
 }
+
+.calc-button {
+    @extend .button;
+    min-width: $spacing-3;
+    height: $spacing-3;
+}
