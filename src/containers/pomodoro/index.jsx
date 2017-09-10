@@ -95,7 +95,7 @@ class Pomodoro extends Component {
             </div>
             <div>
               <h3 className="ds--inline-block pr--2">Fun Minutes: {this.state.funTime / 60}</h3>
-              <button onClick={this.handleFunClick} className="calc-button">+</button>
+              <button onClick={this.handlePlusFunClick} className="calc-button">+</button>
               <button onClick={this.handleMinusFunClick} className="calc-button">-</button>
             </div>
           </div>
