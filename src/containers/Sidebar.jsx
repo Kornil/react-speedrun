@@ -11,6 +11,7 @@ const Sidebar = () => (
       <li className="pb--half"><Link to="/wiki_viewer">Wiki Viewer</Link></li>
       <li className="pb--half"><Link to="/twitch_app">Twitch App</Link></li>
       <li className="pb--half"><Link to="/calculator">Calculator</Link></li>
+      <li className="pb--half"><Link to="/pomodoro">Pomodoro</Link></li>
     </ul>
   </div>
 );
