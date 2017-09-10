@@ -16,3 +16,12 @@
     min-width: $spacing-3;
     height: $spacing-3;
 }
+
+.tictactoe-button {
+    @extend .button;
+    @extend .p--2;
+    @extend .m--1;
+    @extend .ds--inline-block;
+    min-height: $spacing-3;
+    min-width: $spacing-3;
+}

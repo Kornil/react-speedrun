@@ -1,0 +1,11 @@
+.grid-tictactoc {
+  @extend .grid;
+  height: $spacing-10;
+  width: $spacing-10 * 2;
+}
+
+.cell-tictactoe {
+  @extend .br--white;
+  border: 1px solid;
+  text-align: center;
+}

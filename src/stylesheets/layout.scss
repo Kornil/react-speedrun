@@ -3,6 +3,3 @@ main {
     @extend .text--white;
     min-height: 100vh;
 }
-
-
-[class^='col-'][class*='--center'] {justify-self: center}

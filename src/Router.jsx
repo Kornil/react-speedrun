@@ -4,7 +4,9 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import { Home, QuoteMachine, WikiViewer, LocalWeather, TwitchApp, Calculator, Pomodoro } from './containers';
+import { Home, QuoteMachine, WikiViewer,
+  LocalWeather, TwitchApp, Calculator, Pomodoro,
+  TicTacToe } from './containers';
 
 const Router = () => (
   <Switch>
@@ -15,6 +17,7 @@ const Router = () => (
     <Route path="/twitch_app" component={TwitchApp} />
     <Route path="/calculator" component={Calculator} />
     <Route path="/pomodoro" component={Pomodoro} />
+    <Route path="/tictactoe" component={TicTacToe} />
   </Switch>
 );
 
